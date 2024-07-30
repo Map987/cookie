@@ -85,12 +85,17 @@ def main():
       print(f"sessdata: {encrypted_sessdata}")
       print(f"bili_jct: {encrypted_bili_jct}")
       print(f"refresh_token: {encrypted_refresh_token}")
+# ...之前的代码不变
+
+# 在写入 README.md 之前检查变量是否已定义
 with open('README.md', 'w') as readme_file:
-    readme_file.write(f"sessdata: {sessdata}\n")
-    readme_file.write(f"bili_jct: {bili_jct}\n")
-    readme_file.write(f"refresh_token: {refresh_token}\n")
-    readme_file.write(f"\nEncrypted sessdata: {encrypted_sessdata}\n")
-    readme_file.write(f"Encrypted bili_jct: {encrypted_bili_jct}\n")
-    readme_file.write(f"Encrypted refresh_token: {encrypted_refresh_token}\n")
-    readme_file.write(f"\n")
-    
+    readme_file.write(f"sessdata: {sessdata}\n" if sessdata is not None else "sessdata: NOT_DEFINED\n")
+    readme_file.write(f"bili_jct: {bili_jct}\n" if bili_jct is not None else "bili_jct: NOT_DEFINED\n")
+    readme_file.write(f"refresh_token: {refresh_token}\n" if refresh_token is not None else "refresh_token: NOT_DEFINED\n")
+    # 写入加密后的值
+    readme_file.write(f"\nEncrypted sessdata: {encrypted_sessdata}\n" if encrypted_sessdata is not None else "Encrypted sessdata: NOT_DEFINED\n")
+    readme_file.write(f"Encrypted bili_jct: {encrypted_bili_jct}\n" if encrypted_bili_jct is not None else "Encrypted bili_jct: NOT_DEFINED\n")
+    readme_file.write(f"Encrypted refresh_token: {encrypted_refresh_token}\n" if encrypted_refresh_token is not None else "Encrypted refresh_token: NOT_DEFINED\n")
+    readme_file.write(f"\n")  # 写入一个空行作为分隔
+
+# ...后续的代码不变
