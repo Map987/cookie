@@ -81,3 +81,6 @@ def main():
       env_file.write(f"SESSDATA={encrypted_sessdata}\n")
       env_file.write(f"BIILI_JCT={encrypted_bili_jct}\n")
       env_file.write(f"REFRESH_TOKEN={encrypted_refresh_token}\n")
+      print(f"sessdata: {encrypted_sessdata}")
+      print(f"bili_jct: {encrypted_bili_jct}")
+      print(f"refresh_token: {encrypted_refresh_token}")
