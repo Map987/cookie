@@ -61,6 +61,7 @@ def main():
             key, encrypted_value = line.strip().split('=')
             if key == 'SESSDATA':
                 sessdata = decrypt_with_private_key(encrypted_value, private_key)
+                print(sessdata)
             elif key == 'BIILI_JCT':
                 bili_jct = decrypt_with_private_key(encrypted_value, private_key)
             elif key == 'REFRESH_TOKEN':
