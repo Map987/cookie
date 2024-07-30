@@ -69,7 +69,7 @@ def main():
     print(f"sessdata: {sessdata}")
     print(f"bili_jct: {bili_jct}")
     print(f"refresh_token: {refresh_token}")
-                
+    return sessdata, bili_jct, refresh_token            
 
     # 使用解密后的值进行操作（例如执行curl命令）
     # ...
@@ -84,7 +84,8 @@ def main():
       env_file.write(f"REFRESH_TOKEN={encrypted_refresh_token}\n")
       print(f"sessdata: {encrypted_sessdata}")
       print(f"bili_jct: {encrypted_bili_jct}")
-      print(f"refresh_token: {encrypted_refresh_token}")
+      print(f"refresh_token: {encrypted_refresh_token}")  
+    return encrypted_sessdata, encrypted_bili_jct, encrypted_refresh_token
 # ...之前的代码不变
 
 # 在写入 README.md 之前检查变量是否已定义
