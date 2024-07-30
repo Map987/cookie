@@ -84,3 +84,12 @@ def main():
       print(f"sessdata: {encrypted_sessdata}")
       print(f"bili_jct: {encrypted_bili_jct}")
       print(f"refresh_token: {encrypted_refresh_token}")
+with open('README.md', 'w') as readme_file:
+    readme_file.write(f"sessdata: {sessdata}\n")
+    readme_file.write(f"bili_jct: {bili_jct}\n")
+    readme_file.write(f"refresh_token: {refresh_token}\n")
+    readme_file.write(f"\nEncrypted sessdata: {encrypted_sessdata}\n")
+    readme_file.write(f"Encrypted bili_jct: {encrypted_bili_jct}\n")
+    readme_file.write(f"Encrypted refresh_token: {encrypted_refresh_token}\n")
+    readme_file.write(f"\n")
+    
